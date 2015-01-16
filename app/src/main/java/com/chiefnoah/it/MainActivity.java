@@ -1,5 +1,6 @@
 package com.chiefnoah.it;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -66,11 +67,11 @@ public class MainActivity extends ActionBarActivity {
                 updateText();
                 break;
             case 2:
-                currentIndex = 3;
+                currentIndex = 5;
                 updateText();
                 break;
             case 3:
-                currentIndex = 5;
+                currentIndex = 2;
                 updateText();
                 break;
             case 4:
@@ -107,6 +108,8 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, About.class);
+            startActivity(intent);
             return true;
         }
 
